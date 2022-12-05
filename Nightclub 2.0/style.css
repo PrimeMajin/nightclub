@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+/* Universal */
+
+* {
+    box-sizing:border-box; /*For most css projects. Allows adding padding and borders without having to add to the width of an element*/
+    margin:0; /*To reset margin and padding */
+    padding:0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color:#333;
+    line-height:1.6;
+}
+
+ul {
+    list-style-type:none; /*No bullet points */
+}
+
+a {
+    text-decoration:none; /*No underlines*/
+    color:white;
+}
+
+h1, h2 {
+    font-weight:300;
+    line-height:1.2;
+    margin: 10px 0;
+    z-index:2;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width:100%; /*Contains image within its container even if the image is larger*/
+}
+
+/* Navbar and Banner */
+.container{
+    display:flex;
+    justify-content: flex-end;
+   
+}
+
+.text {
+    padding: 200px 50px;
+    text-align:center;
+}
+
+.text h2 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.text p {
+    font-size:0.8rem;
+}
+
+
+.navbar {
+    color:white;
+    background-color: rgb(165, 14, 152);
+    background-size:100% auto;
+    background-image: url("/images/long-truong-Y5PXVs1LpY4-unsplash.jpeg");
+    background-size: cover;
+    background-blend-mode:multiply; /* To darken things and "lighten" to lighten things */
+    background-position-y: center;
+  
+}
+
+.navbar ul { /*so that the display elements are placed horizontally*/
+    display:flex;   
+    margin:20px 10px;
+    padding-right:30px;
+    
+}
+
+.navbar li {
+    margin:0 10px;
+    color:white;
+    z-index:2;
+    font-size: 1.2rem;
+}
+
+.navbar a:hover {
+    border-bottom: 2px white solid;
+   
+}
+
+.logo {
+    color:white;
+    float:left;
+    margin: 20px 10px;
+    z-index:2;
+    padding-left:30px;
+}
+
+.navbar img {
+    position:absolute
+}
+
+.btn-primary {
+    margin-top:15px;
+    font-size:1.2rem;
+    padding:20px 40px;
+    background-color:rgb(146, 74, 214);
+    color: white;
+    border:none;
+    border-radius:8px;
+    transition-duration: 0.5s;
+}
+
+.btn-primary:hover {
+    background-color:rgb(77, 6, 105);
+    cursor:pointer;
+}
+
+.btn-secondary:hover {
+    background-color:rgb(3, 40, 82);
+    cursor:pointer;
+}
+
+.btn-secondary {
+   
+    font-size:1.2rem;
+    padding:20px 40px;
+    background-color:rgb(5, 61, 126);
+    color: white;
+    border:none;
+    transition-duration: 0.5s;
+  
+}
+
+/* Events */
+
+.events {
+    background-color:black;
+    padding:50px;
+}
+
+.events h2 {
+    color:white;
+    font-weight: bold;
+    margin:20px 50px;
+}
+
+.events h3 {
+    padding:20px 0;
+}
+.event-container {
+    animation: fadeIn 1s ease-in;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-transform: uppercase;
+    text-align:left;
+    color:white;
+
+}
+.event-container img {
+    width:350px;
+    height:250px;
+}
+
+.event-element {
+    display:flex;
+    flex-direction: column;
+    padding: 10px 25px;   
+}
+
+/* Contact */
+
+.contact {
+    background-color:black;
+    padding:0 100px;
+}
+
+.grid-container {
+    animation: fadeIn 2.5s ease-in;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: black;
+    gap:20px;
+}
+
+
+.grid-item-1 {
+    background: url('/images/girls.jpeg');
+    background-size: cover;
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start: 1;
+    grid-row-end:5;
+}
+
+.grid-item-2 {
+    background-color: rgb(146, 74, 214);
+    text-align:center;
+    color: black;
+    padding: 50px 50px;
+    grid-column-start:2;
+    grid-column-end:4;
+    grid-row-start: 1;
+    grid-row-end:3;
+}
+
+.grid-item-2 h4,
+.grid-item-2 h5 {
+    font-weight:bold;
+    padding:10px 0;
+    font-size: 1.2rem;
+}
+
+.grid-item-2 h2 {
+    font-weight:bold;
+    padding:10px 0;
+    font-size: 2rem;
+}
+
+.grid-item-3 {
+    text-align:center;
+    color:white;
+
+    grid-column-start:2;
+    grid-column-end:4;
+    grid-row-start: 3;
+    grid-row-end:5;
+}
+
+.grid-item-3 h2 {
+    font-size: 2.3rem;
+}
+
+.grid-item-3 p {
+    padding:20px;
+    font-size: 0.8rem;
+}
+
+.grid-item-3 .btn-primary {
+    padding: 9px 25px;
+    border-radius: 0;
+}
+
+input[type="email"] {
+    width:350px; 
+    height:42px; 
+    font-size:14px;
+}
+
+/* Footer  */
+
+footer {
+    background-color:black;
+    color:white;
+    margin:0;
+    padding:30px 200px;
+}
+
+.grid-footer-container {
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    border-top:0.5px solid gray;
+}
+
+.grid-footer-container li {
+    font-size:0.8rem;
+    padding:5px;
+}
+
+.grid-footer-container h2 {
+    font-weight:bold;
+    padding: 10px 0;
+    color:gray;
+}
+
+.copyright {
+    font-size:0.8rem;
+    text-align: center;
+    margin:0 auto;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    0% {
+         opacity:0;
+    }
+
+    100% {
+        opacity:1;
+    }
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
