@@ -297,9 +297,28 @@ footer {
 
 /* Media Queries */
 
-@media screen and (max-width: 500px) {
-    .navbar a {
-      float: none;
-      display: block;
+@media screen and (max-width: 1200px) {
+
+    .grid-container {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .grid-footer-container {
+        display:flex;
+        flex-direction: column;
+        text-align:center;
+    }
+
+    .grid-footer-container li {
+        font-size:0.8rem;
+        padding:2px;
+    }
+
+  }
+
+  @media screen and (max-width: 800px) {
+    .navbar ul {
+        display:none;     
     }
   }
