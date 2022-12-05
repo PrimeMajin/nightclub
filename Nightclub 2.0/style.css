@@ -102,6 +102,10 @@ img {
     position:absolute
 }
 
+.fa {
+    padding: 15px 15px 0px 0px;
+}
+
 .btn-primary {
     margin-top:15px;
     font-size:1.2rem;
@@ -295,6 +299,54 @@ footer {
     }
 }
 
+
+/* Dropdown Button */
+.dropbtn {
+    display: none;
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: transparent;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    right:0;
+    position:absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    text-align: right;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: transparent;}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
 /* Media Queries */
 
 @media screen and (max-width: 1200px) {
@@ -315,10 +367,26 @@ footer {
         padding:2px;
     }
 
-  }
-
-  @media screen and (max-width: 800px) {
     .navbar ul {
         display:none;     
     }
+    .dropbtn {
+        display: inline-block;
+    
+      }
+
+      .navbar a:hover {
+        border: none;
+        font-size:1.2rem;
+       
+    }
+
   }
+
+  @media screen and (min-width: 1200px) {
+    .dropdown-content {
+        display: none;
+     
+      }
+ 
+    }
